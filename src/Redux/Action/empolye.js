@@ -32,7 +32,6 @@ export const getEmployeFailed = (error) => ({
 });
 /********************addEmploye*********************** */
 export const addEmpolye = (data) => {
-  //console.log("action data-->", data);
   return {
     type: ADD_EMPLOYE_REQUESTED,
     payload: data,
@@ -40,7 +39,6 @@ export const addEmpolye = (data) => {
 };
 
 export const SuccessAddEmpoloye = (addEmploye) => {
-  // console.log("action emp", addEmploye);
   return {
     type: ADD_EMPLOYE_SUCCESS,
     payload: addEmploye,

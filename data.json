@@ -1,30 +1,30 @@
 {
   "Employe": [
     {
-      "Name": "Test user 2",
-      "Email": "Testuser1@gmail.com",
-      "Phone": "1234567890",
-      "Address": "Krishannagar,Ahmedabad",
+      "Name": "Darshan Vasa",
+      "Email": "vdarshan786@gmail.com",
+      "Phone": "12345789012",
+      "Address": "KrishnaNagar, Bhavnagar",
       "id": 1
     },
     {
-      "Name": "SP ",
-      "Email": "sp@gmail.com",
-      "Phone": "1234567890",
-      "Address": "Bapunagar, Ahmedabad",
+      "Name": "Json Data",
+      "Email": "jsodn123@gmail.com",
+      "Phone": "9874563210",
+      "Address": "Ahmedabad, india",
       "id": 2
     },
     {
-      "Name": "SM",
-      "Email": "sm@gmail.com",
-      "Phone": "0123456789",
-      "Address": "Vastral, Ahmedabad",
+      "Name": "React",
+      "Email": "react123@react.com",
+      "Phone": "2589631477",
+      "Address": "FaceBook",
       "id": 3
     },
     {
       "Name": "Test User ",
       "Email": "testuser@abc.com",
-      "Phone": "0987456321",
+      "Phone": "1234567890",
       "Address": "Test Addresse",
       "id": 4
     }
