@@ -1,52 +1,69 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { addEmpolye, getEmploye } from "../Redux/Action/empolye";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
-const EmpolyeAdd = () => {
-  const [formempolye, setEmpolye] = useState({
+const EditEmploye = (props) => {
+  const { GetUserById, getEmploye, getEmployeById, updateEmploye } = props;
+  const [formemploye, setEmploye] = useState({
     Name: "",
     Email: "",
     Phone: "",
     Address: "",
   });
 
+  const { id } = useParams();
+
   const navigate = useNavigate();
-
-  let { Name, Email, Phone, Address } = formempolye;
-
-  const dispatch = useDispatch();
-
   const [error, setError] = useState("");
+
+  let { Name, Email, Phone, Address } = formemploye;
 
   const handleInputChange = (e) => {
     let { name, value } = e.target;
-    setEmpolye({
-      ...formempolye,
+    setEmploye({
+      ...formemploye,
       [name]: value,
     });
   };
 
+  useEffect(() => {
+    getEmployeById(id);
+  }, [id]);
+
+  useEffect(() => {
+    setEmploye({
+      ...GetUserById,
+    });
+  }, [GetUserById]);
+
   const handleSubmit = (e) => {
-    // console.log("Component emp--->", formempolye);
     e.preventDefault();
     if (!Name || !Email || !Phone || !Address) {
       setError("Warning: Please Fill the all Input");
     } else {
-      dispatch(addEmpolye(formempolye));
-      dispatch(getEmploye());
+      updateEmploye(id, formemploye);
+      getEmploye();
       setError("");
       navigate("/");
     }
   };
-
   return (
     <div className="container" style={{ marginTop: "22px" }}>
-      <h3>Add Empolye</h3>
+      <h3>Edit Empolye</h3>
       <h4 style={{ color: "red" }}>{error}</h4>
       <div className="row" style={{ marginTop: "17px" }}>
-        <div className="col-8">
+        <div className="col-12">
           <form>
+            {/* <div className="mb-3">
+              <input
+                type="number"
+                className="form-control"
+                id="formGroupExampleInput"
+                placeholder="Id"
+                name="Id"
+                value={Id}
+                onChange={(e) => handleInputChange(e)}
+              />
+            </div> */}
             <div className="mb-3">
               <input
                 type="text"
@@ -110,4 +127,4 @@ const EmpolyeAdd = () => {
   );
 };
 
-export default EmpolyeAdd;
+export default EditEmploye;
