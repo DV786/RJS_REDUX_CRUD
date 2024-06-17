@@ -1,0 +1,35 @@
+{
+  "Employe": [
+    {
+      "Name": "Test user 2",
+      "Email": "Testuser1@gmail.com",
+      "Phone": "1234567890",
+      "Address": "Krishannagar,Ahmedabad",
+      "id": 1
+    },
+    {
+      "Name": "SP ",
+      "Email": "sp@gmail.com",
+      "Phone": "1234567890",
+      "Address": "Bapunagar, Ahmedabad",
+      "id": 2
+    },
+    {
+      "Name": "SM",
+      "Email": "sm@gmail.com",
+      "Phone": "0123456789",
+      "Address": "Vastral, Ahmedabad",
+      "id": 3
+    },
+    {
+      "Name": "Test User ",
+      "Email": "testuser@abc.com",
+      "Phone": "0987456321",
+      "Address": "Test Addresse",
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
